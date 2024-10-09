@@ -120,7 +120,7 @@ contract NaiveReceiverChallenge is Test {
         (uint8 v, bytes32 r, bytes32 s) = vm.sign(playerPk, requestHash);
         bytes memory signature = abi.encodePacked(r, s, v);
 
-        (forwarder.execute(request, signature));
+        require(forwarder.execute(request, signature));
     }
 
     /**
