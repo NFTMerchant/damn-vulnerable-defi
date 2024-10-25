@@ -114,3 +114,8 @@ contract UnstoppableChallenge is Test {
         assertEq(vault.owner(), deployer, "Vault did not change owner");
     }
 }
+
+
+/*Unstoppable.sol 
+by simply transferring ether to this contract you can cause the totoalsupply!=balancebefore which will cause the contract to fail
+
